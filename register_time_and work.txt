@@ -1,0 +1,7 @@
+1) Öppna utforskaren
+2) Connect to server
+3) ange "smb://192.168.130.3/development"
+4) Navigera till "Timeliste"
+5) Editera mall "RDtidmall"
+6) Spara om i rätt datum- och år-mapp under "SW"
+7) Fyll i tidrapporten enligt tidrapporten för Knightec

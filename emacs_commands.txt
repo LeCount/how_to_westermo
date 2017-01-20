@@ -1,0 +1,142 @@
+M = ALT ("Meta")
+C = CTR
+
+******************
+**** Sessions ****
+******************
+
+C-x C-c:		End or quit Emacs.
+
+********************
+**** Navigation ****
+********************
+
+C-v			PgDown/cursor next screen.
+M-v			PgUp/cursor previous screen.
+C-l			Toggle position of text at cursor, 
+			top/center/bottom on screen.
+
+C-n			Cursor next line.
+M-f			Cursor next word.
+C-f			Cursor next character.
+
+C-p			Cursor previous line.
+M-b			Cursor previous word.
+C-b			Cursor previous character.
+
+M-a			Cursor beginning of sentance.
+M-<			Cursor beginning of text.
+
+M-e			Cursor end of sentance.
+M->			Cursor end of text.
+
+C-s			Search buffer/search for text (Forward).
+C-r			Search buffer/search for text (Backward).
+
+********************************
+**** Commands and arguments ****
+********************************
+
+C-u <NUM> 		Numeric argument. Specified
+			before commands.
+
+C-g			Abort current command.
+
+*****************
+**** Editing ****
+*****************
+
+C-/			Undo.
+
+C-SPC			Mark/Set start.
+
+C-k			Kill line/delete line.
+C-y			Insert deleted line at cursor (yank).
+
+
+**************
+**** File ****
+**************
+
+C-x C-f			Find and open file.
+C-x C-s			Save current file.
+
+*****************
+**** Buffers ****
+*****************
+
+C-x C-b			List active buffers.
+C-x b			Go to buffer by name.
+
+C-x 1			Close all inactive open windows.
+C-x 2			Split current buffer into 2 windows.
+C-x o			Jump between open windows.
+
+C-x s			Save buffers (if changed).
+
+*************************
+**** Windows/Display ****
+*************************
+
+C-x 1			Close all windows accept active.
+C-x 2			Split active window in two (horizontal).
+C-x 3			Split active window in two (vertical).
+C-x o			Change/alternate window of focus.
+
+*****************
+**** Compile ****
+*****************
+
+C-c C-z			Open python shell.
+M-x-shell		Open shell
+C-c C-c 		Run code in current buffer.
+C-c C-r 		Run selected code.
+
+
+*******************
+**** Debugging ****
+*******************
+
+- (1) M-x python-mode or realgud:pdb
+- (2) "Run pdb (like this):" python -m pdb file.py
+- (3) "(PDB)" help
+
+Breakpoints:		Place by clicking row in source window (or 'B')
+n			Step over
+s			Step into
+f			Finish/step out
+c			Continue
+r			Run/restart debugger
+q			Quit	
+
+*********************************
+**** Packages and extensions ****
+*********************************
+
+M-x packet-refresh-contents	
+
+**************
+**** Elpy ****
+**************
+
+M-.			Goto definition.	
+C-c C-d			Display documentation.
+
+C-;			Mark variable for renaming.
+			When edited, all ref. in scope updates.
+			Break by pressing "C-;" again.
+				
+
+*************************
+**** Configure Emacs ****
+*************************
+
+(1) M-x list-packages			List packages from melpa.
+
+(2) C-s <search text>			Search for packet to
+					install.
+
+(3) C-x C-f /.emacs.d/init.el 		Open Emacs config file 
+					for editing.
+
+

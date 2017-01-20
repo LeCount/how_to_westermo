@@ -1,0 +1,33 @@
+# To be able to run fawlty repo:
+$ sudo su -
+
+$ echo "deb http://deb.labs.westermo.se/ wmo main" >> /etc/apt/sources.list
+wget http://deb.labs.westermo.se/conf/wmo.gpg.key
+apt-key add wmo.gpg.key
+apt-get update
+
+# Install packages:
+$ apt-get install wmo-build-essential wmo-fawlty-essential wmo-fawlty-server wmo-fawlty-webtest wmo-toolchains wmo-mgmt-guide-essential backuppc-client toolchains
+
+# Clone fawlty repo
+git clone git+ssh://username@git.labs.westermo.se/home/git/fawlty.git
+
+# Configure your topology-file ("hostname".yml) in "fawlty/cfg/topology"
+# It should contain information regarding how your DUT's and equipment 
+  are set up, that will run the tests.
+
+# Create a test
+main.py
+
+# You now have main.py (a test-file),
+  and "$(hostname)". py (a topology-file). 
+
+# Load fawlty-config-file onto the DUT/DUT's
+fawlty/src$ ../scripts/fawlty.sh test/meta/fawlty_config/
+
+# Run a simple test or your own
+fawlty/src$ ../scripts/fawlty.sh test/meta/true/
+fawlty/src$ ../scripts/fawlty.sh test/"$(myTest)"/
+
+# Run a suite (list of many tests)
+fawlty/src$ ../scripts/fawlty.sh ../suites/$(suite).yml 

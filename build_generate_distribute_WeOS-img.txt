@@ -1,0 +1,30 @@
+#Set global setings for git, for development on Westermo 
+git config --global merge.ff false
+git config --global user.name Name Surname
+git config --global user.email "MyEmail"
+
+#Get repo
+Desktop$  git clone git+ssh://USER@git.labs.westermo.se/home/git/Dragnet/weos.git
+
+#Checkout proper branch
+Desktop/weos$ git checkout "branch"
+
+#Build, and generate img (into ftp-folder)
+weos$ TFTPDIR=/srv/ftp bin/build.sh Corazon/Standard
+
+#Make sure your interface is up and running
+weos$ sudo ifconfig eth0.10 198.18.10.98/24 up
+weos$ sudo /etc/init.d/conserver-server restart
+
+#Try to ping your DUT's
+weos$ ping 198.18.10.64
+weos$ ping 198.18.10.1
+weos$ ping 198.18.10.2
+weos$ ping 198.18.10.3
+weos$ ping 198.18.10.4
+
+#Reboot DUT and ram-load img onto DUT
+Desktop/weos$ console ser1
+DUT1_login: *****
+DUT1_password: *********
+DUT1: reboot

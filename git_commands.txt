@@ -1,0 +1,117 @@
+clone				git clone <repo>
+
+**********
+** Info **
+**********
+
+status of local git-folder	git status
+
+log/check repo history		git log
+	details			git log --stats
+	history (assci graph)	git log --graph
+
+*********************************
+** Commiting changes to remote ** 
+*********************************
+
+track untracked files		git add --all
+				git add <file>
+
+commit tracked files		git commit -m <message...>
+
+Change previous commit msg.	git commit --amend
+
+Don’t want to commit 		git stash
+what you’ve been working 
+on yet when switching branch. 
+
+Stash all untracked files	git stash --all
+
+list stashed commits		git stash list
+
+
+Reapply stashed prev. commit	git stash apply
+Reapply stashed commit		git stash apply <stashId>
+
+
+fetch from remote repo		git fetch
+all that you don't have
+allready (no local merge!)
+
+
+pull down from remote repo	git pull
+(try merge with local)
+(git fetch + git merge) 
+
+Updates remote refs./repo,	git push 
+using tracked local 
+refs./repo.
+
+			
+push specific branch		git push <remote> <branch> 
+to remote.
+	
+**************
+** Branches **
+**************
+
+list branches			git branch
+
+
+switch to branch/		git branch <branch name>
+create branch		
+
+
+show current branch (HEAD)	git log --oneline --decorate
+
+
+Switch to branch/		git checkout <branch name>
+re-point HEAD
+
+
+switch + create branch		git checkout -b <branch name>
+
+
+(Files in your working directory will change on checkout!)
+
+
+merge current branch		git merge <other branch name> 
+with/deploy branch 
+to other branch.
+(Current brach is the one the other 
+branch will merge into! So check out 
+the proper branch before merge!)
+
+
+list branches			git branch --no-merged 
+that has not been merged
+(can't delete these branches 
+untill they are merged!)
+
+
+remove/delete branch AFTER 	git branch -d <branch name>
+it has been merged into master
+
+
+Also take a look at rebasing!!
+(Don't rebase anything that has been pushed elsewhere!)
+https://git-scm.com/book/en/v2/Git-Branching-Rebasing
+
+Remove/delete all untracked	git clean 
+files in repo
+
+Preview clean command		git clean -d -n
+
+
+***************
+** Conflicts **
+***************
+
+open tool for 			git mergetool
+resolving conflicts
+
+
+configure tool to use		git config --global merge.tool <tool name>
+
+
+
