@@ -14,7 +14,7 @@ git clone git+ssh://username@git.labs.westermo.se/home/git/fawlty.git
 
 # Configure your topology-file ("hostname".yml) in "fawlty/cfg/topology"
 # It should contain information regarding how your DUT's and equipment 
-  are set up, that will run the tests.
+# are set up, that will run the tests.
 
 # Create a test
 main.py
@@ -25,9 +25,24 @@ main.py
 # Load fawlty-config-file onto the DUT/DUT's
 fawlty/src$ ../scripts/fawlty.sh test/meta/fawlty_config/
 
-# Run a simple test or your own
+# Run a simple test or your own.
+# The easiest way of running a fawlty test is by using the wrapper 
+# shell script, fawlty.sh. This script MUST be run from 
+# the FAWLTYDIR/src directory.
 fawlty/src$ ../scripts/fawlty.sh test/meta/true/
-fawlty/src$ ../scripts/fawlty.sh test/"$(myTest)"/
+fawlty/src$ ../scripts/fawlty.sh test/"$(myTest-folder)"/
+
+# There are parameters that can be passed to Fawlty. TODO: Research and list them all here
+# --no-reset 	Do not reset DUT's, useful with --loop
+# --no-login 	Start session with no login (or power ups)
+# --loop N 	Loop the given test, or suite, N times
+# --no-check 	Do a quick reset/end of test, no checks and no status
+# --phy 	use another topology
+# --ramload 	run test with RAM-loaded image
+
+# Run Until Fail
+# Another great script is run_until_fail.sh. It runs until fail. 
+fawlty/src$ sudo ../scripts/run_until_fail.sh test/...
 
 # Run a suite (list of many tests)
 fawlty/src$ ../scripts/fawlty.sh ../suites/$(suite).yml 
