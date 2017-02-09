@@ -1,0 +1,7 @@
+#Viper introduction
+
+20 ports
+Coronete (build)
+PowerPC CPU
+WeOs4x
+
