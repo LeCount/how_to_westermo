@@ -1,0 +1,12 @@
+# install sshfs
+sudo apt-get install sshfs
+
+# Mount/create portal between the server's home-folder, and a folder on your computer. 
+# (files on server are updated when folder on your computer gets updated, and the other way around...)
+sudo sshfs -o allow_other USER@SERVER_PATH: FOLDER_ON_MY_PC
+
+# Unmount folder when done editing or when caught in trouble
+
+sudo sshfs umount FOLDER_ON_MY_PC
+
+
