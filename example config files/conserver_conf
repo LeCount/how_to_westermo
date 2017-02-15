@@ -1,0 +1,42 @@
+# /etc/conserver/conserver.cf
+
+config * {
+   sslrequired no;
+}
+default full {
+   rw *;
+}
+default * {
+   logfile /var/log/conserver/&.log;
+   timestamp "";
+   include full;
+   master localhost;
+   type device;
+   baud 115200;
+   parity none;
+   options !ixon,!ixoff;
+}
+
+console lynx1 {
+   device /dev/lynx1;
+}
+
+console lynx2 {
+   device /dev/lynx2;
+}
+
+console lynx3 {
+   device /dev/lynx3;
+}
+
+console lynx4 {
+   device /dev/lynx4;
+}
+
+console lynx5 {
+   device /dev/lynx5;
+}
+
+access * {
+   trusted localhost;
+}

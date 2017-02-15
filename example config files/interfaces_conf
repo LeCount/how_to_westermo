@@ -1,0 +1,31 @@
+# /etc/network/interfaces
+
+auto lo
+iface lo inet loopback
+
+auto eth1
+iface eth1 inet static 
+
+auto eth1.11
+iface eth1.11 inet static 
+    address 198.18.11.99 
+    netmask 255.255.255.0 
+    vlan-raw-device eth1
+
+auto eth1.12
+iface eth1.12 inet static 
+    address 198.18.12.99 
+    netmask 255.255.255.0 
+    vlan-raw-device eth1
+
+auto eth1.13
+iface eth1.13 inet static 
+    address 198.18.13.99 
+    netmask 255.255.255.0 
+    vlan-raw-device eth1
+
+auto eth1.14
+iface eth1.14 inet static 
+    address 198.18.14.99 
+    netmask 255.255.255.0 
+    vlan-raw-device eth1

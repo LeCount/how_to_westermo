@@ -1,0 +1,8 @@
+# /etc/udev/rules.d/44-persistent-usb.rules
+
+ACTION=="add", KERNEL=="ttyUSB*", ATTRS{product}=="TTL232R-3V3", ATTRS{serial}=="FTHKBB3A", SYMLINK+="lynx1"
+ACTION=="add", KERNEL=="ttyUSB*", ATTRS{product}=="TTL232R-3V3", ATTRS{serial}=="FTG4EVJK", SYMLINK+="lynx2"
+ACTION=="add", KERNEL=="ttyUSB*", ATTRS{product}=="TTL232R-3V3", ATTRS{serial}=="FTG4EUEJ", SYMLINK+="lynx3"
+ACTION=="add", KERNEL=="ttyUSB*", ATTRS{product}=="TTL232R-3V3", ATTRS{serial}=="FTG4EX7R", SYMLINK+="lynx4"
+ACTION=="add", KERNEL=="ttyUSB*", ATTRS{product}=="TTL232R-3V3", ATTRS{serial}=="FTG4EWQS", SYMLINK+="lynx5"
+
