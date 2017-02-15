@@ -3,10 +3,14 @@ sudo apt-get install sshfs
 
 # Mount/create portal between the server's home-folder, and a folder on your computer. 
 # (files on server are updated when folder on your computer gets updated, and the other way around...)
-sudo sshfs -o allow_other USER@SERVER_PATH: FOLDER_ON_MY_PC
+sshfs SERVER_PATH: FOLDER_ON_MY_PC
+
+# That Only works if the username on the other computer is the same as you local username
+# if they are different, you can use: 
+sshfs USERNAME@SERVER_PATH: FOLDER_ON_MY_PC
 
 # Unmount folder when done editing or when caught in trouble
 
-sudo sshfs umount FOLDER_ON_MY_PC
+sshfs umount FOLDER_ON_MY_PC
 
 
