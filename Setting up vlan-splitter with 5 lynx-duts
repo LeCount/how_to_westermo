@@ -1,0 +1,34 @@
+# Assuming the following setup:
+
+# DUT 1, 2, 3 and 4, are all on their own vlan; 11, 12, 13 and 14.
+
+# DUT 5 is the splitter
+
+# Follow the setup-guides for interfaces, dnmasq, etc on westermo wiki
+___________________________________________________________________________
+
+# Conf DUT 5:
+
+#Disable lldp daemon and use unique mac-address-table for all duts
+lynx:/config/vlans/#> unique-macdb
+lynx:/config/#> no lldp
+
+# For each vlan 11-14, set "no igmp"
+lynx:/config/vlan11/#> no igmp
+
+# The connection-port, to be used between DUT 5 and one of your vlans
+# shall be untagged. 
+lynx:/config/iface vlan11/#> untagged 3
+
+The connection-port between PC and DUT 5 shall be marked tagged. 
+lynx:/config/iface vlan11/#> tagged 10
+
+_________________________________________________________________________
+
+
+# Confic DUT 1-4:
+
+# On each DUT, add an optional ip-address for the vlan1 interface
+lynx:/config/iface vlan1/#> inet static
+lynx:/config/iface vlan1/#> add 198.18.11.1
+
