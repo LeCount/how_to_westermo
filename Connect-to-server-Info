@@ -1,0 +1,5 @@
+When connecting to a server (usually windows smb server) you can use "Files"(Ubuntu explorer)->Left toolbar->"Connect to server".
+
+To access the files from the terminal in ubuntu 16, the mount point can be found at:
+/var/run/user/<USER-ID>/gvfs/<SERVER-NAME>
+
