@@ -1,0 +1,3 @@
+[submodule "emacs/EmacsConfig"]
+	path = emacs/EmacsConfig
+	url = https://github.com/Reicher/EmacsConfig.git
