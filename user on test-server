@@ -5,4 +5,4 @@
 (2) sudo adduser USER
 
 # Add user to sudo-group
-(4) sudo adduser USER sudo
+(3) sudo adduser USER sudo

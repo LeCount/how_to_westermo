@@ -32,3 +32,12 @@ _________________________________________________________________________
 lynx:/config/iface vlan1/#> inet static
 lynx:/config/iface vlan1/#> add 198.18.11.1
 
+_________________________________________________________________________
+
+# Restaring stuff to make it work.
+
+# Reload the rules
+sudo udevadm control --reload
+
+# Restart the conserver
+sudo /etc/init.d/conserver-server restart
