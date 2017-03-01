@@ -1,0 +1,30 @@
+# Problemet: 
+
+ERROR: Could not get current signature from flash
+     ID: OK. MTD device empty
+     Type: Flattened Image Tree (FIT)
+     ID: Failed, expected '', got 'Corazon/Standard'!
+     Failed verifying signature!
+
+
+
+Verkar som att DUT'arna kör på korrupta back-up'er. Det är möjligt att ignorera checken som går fel genom att köra upgrade-programmet i shell istället (då kan man lägga till lite trevliga flaggor):
+
+dut1:/#> shell
+
+~ # upgrade
+--------------------------------------------------------------------------------
+Usage: upgrade [-bfkluns] [-r mtd-device] [-R mtd-label] [server] <image>
+ -n, --no-checks               Disable image validation, CRC calculation etc.
+ -R, --mtd-label  <Label>      MTD Label to flash, see /proc/mtd for list
+
+~ # cat /proc/mtd
+
+dev:    size   erasesize  name
+mtd0: 03800000 00020000 "Linux_main"
+mtd1: 03800000 00020000 "Linux_backup"
+mtd2: 00f00000 00020000 "Config"
+mtd3: 00080000 00020000 "BareboxEnv"
+mtd4: 00080000 00020000 "Barebox"
+
+~ # upgrade -n -R Linux_main  198.18.121.99 WeOS-mpc85xx-9.99.x.bin
