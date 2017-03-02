@@ -1,0 +1,30 @@
+Quilt guide is used to keep track of, apply, and discard patches.
+
+Quilt builds it's patches in a "stack-like" way. You can PUSH and POP patches onto the quilt-stack.
+Patches are connected to files, like .c- or .h-files. 
+
+In order to make a valid change to a file, the patch responsible for the specific file must be refreshed.
+
+Patches that are not pushed on the stack, will not be applied in the resulting img. 
+So, it is important to check what patches that are currently applied.  
+
+Exp. using quilt to apply a change in the final img, by changing a .c-file called "myFile" connected to a patch called "myPatch".
+
+$ cd [folder were patch lies]
+
+# Show patches
+$ quilt series
+
+# POP the patch that you want to change (the one responsible for the file you changed)
+$ quilt pop [myPatch]
+
+# Apply your changes to the patch
+quilt refresh
+
+# Re-apply the other patches
+quilt push [the patch that originally was on the top of the stack]
+
+# You are done! Build your img!
+
+
+More info, smart commands and tutorials? Google is your friend!
