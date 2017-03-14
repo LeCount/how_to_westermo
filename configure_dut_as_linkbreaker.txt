@@ -1,0 +1,10 @@
+# Navigate to fawlty repo, and open folder:
+
+cd fawlty/tools
+
+# Read README.txt for instructions and HOWTO.
+
+# Config-files land scripts to put on the Lynx are located in the folder "L210-F2G".
+# They can be transfered throug tftp.
+
+# Enjoy!
