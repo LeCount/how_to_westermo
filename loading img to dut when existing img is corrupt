@@ -27,4 +27,4 @@ mtd2: 00f00000 00020000 "Config"
 mtd3: 00080000 00020000 "BareboxEnv"
 mtd4: 00080000 00020000 "Barebox"
 
-~ # upgrade -n -R Linux_main  198.18.121.99 WeOS-mpc85xx-9.99.x.bin
+~ # upgrade -n -R Linux_main  198.18.121.99 {$your_img}

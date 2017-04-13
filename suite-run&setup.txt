@@ -45,4 +45,4 @@ fawlty/src$ ../scripts/fawlty.sh test/"$(myTest-folder)"/
 fawlty/src$ sudo ../scripts/run_until_fail.sh test/...
 
 # Run a suite (list of many tests)
-fawlty/src$ ../scripts/fawlty.sh ../suites/$(suite).yml 
+fawlty/src$ ../scripts/fawlty.sh ../suites/$(suite).yml # or use repo: fawlty/suit_builder.git
