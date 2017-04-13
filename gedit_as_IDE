@@ -1,0 +1,13 @@
+# Malm does not need to know, and I was nvr here...
+
+# (1) Install plugins
+$ sudo apt-get install gedit-developer-plugins gedit-plugins
+
+# (2) Run gedit
+$ gedit
+
+# (3) GOTO: Edit->Preferences->Plugins
+# (4) Customize as you please! 
+
+
+# Very usefull in my humble opinion:O!
