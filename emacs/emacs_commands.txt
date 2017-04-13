@@ -139,4 +139,9 @@ C-;			Mark variable for renaming.
 (3) C-x C-f /.emacs.d/init.el 		Open Emacs config file 
 					for editing.
 
+*************************
+**** Help and search ****
+*************************
 
+M-x apropos                             Search for command, function 
+                                        or variable in emacs (regexp).
