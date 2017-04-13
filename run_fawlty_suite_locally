@@ -1,0 +1,9 @@
+# Clone repo suitbuilder to local computer
+
+$ git clone git+ssh://USER@git.labs.westermo.se/home/git/Test/Fawlty/suitebuilder.git
+
+# Run a suit with standard fawlty script
+
+fawlty/srs $ ../scripts/fawlty.sh --debug {$path_to_suitbuilder_repo}/suites/{$suite_to_run}
+
+# Done!
