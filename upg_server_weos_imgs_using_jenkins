@@ -3,7 +3,7 @@
 http://testportal.labs.westermo.se/index
 
 # (2) In step 3 ("Choose image supply method"), 
-# cpy + paste the location for the .pkg-file you want to use, on the FTP-server.
+# cpy + paste the location for the .pkg-file you want to use, on the jenkins***-server.
 # # DO NOT CLICK FTP! DON'T EVEN TOUCH IT!
 
 
