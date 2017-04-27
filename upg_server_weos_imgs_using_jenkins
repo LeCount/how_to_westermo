@@ -1,0 +1,26 @@
+# (1) GOTO:
+ 
+http://testportal.labs.westermo.se/index
+
+# (2) In step 3 ("Choose image supply method"), 
+# cpy + paste the location for the .pkg-file you want to use, on the jenkins***-server.
+# # DO NOT CLICK FTP! DON'T EVEN TOUCH IT!
+
+
+
+
+# exp pointing out a .pkg for a developers weos-branch:
+# base-location: http://jenkins.labs.westermo.se/view/WeOS-branches/
+
+http://jenkins.labs.westermo.se/view/WeOS-branches/job/WeOS-usr_jas1088_14948/lastSuccessfulBuild/artifact/images/WeOS-9.99.x.pkg
+
+
+
+
+# exp pointing out a .pkg for latest weos 4.21:
+# base-location: http://jenkins.labs.westermo.se/job/WeOS-4.21.x
+
+# http://jenkins.labs.westermo.se/job/WeOS-4.21.x/lastSuccessfulBuild/artifact/images/WeOS-4.21.x.pkg
+
+
+# (3) Continue to queue operation to server as usual...
