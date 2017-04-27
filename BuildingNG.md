@@ -8,12 +8,10 @@ General build steps
    `git clone git+ssh://USER@git.labs.westermo.se/home/git/Dragnet/weos.git`
 2. Cd to WeOS folder
    `cd weos`
-3. Checkout master branch
-   `git checkout master`
-4. Pull / Update all submodules
+3. Pull / Update all submodules
    `git submodule update --init`
-5. To build the first time, "Basis" is the main type for Lynx etc.
-   `/bin/build.sh Basis/Standard`
+4. To build the first time, "Basis" is the main type for Lynx etc.
+   `./bin/build.sh Basis/Standard`
 
 Tips and tricks
 -----------------------------------------------------------------------
