@@ -21,3 +21,16 @@ Tips and tricks
   `make V=1 cli-build`
 * Use to see error-msgs that make sense
   `tail build.log`
+* Add "export TFTPDIR=/srv/ftp" to ~/.bashrc to auto-copy img to /srv/ftp
+* run 'dmesg' from the dut shell to printout the kernel log
+* To rebuild kernel: 'touch kernel/linux-obj-Basis/.config'
+
+
+General info
+----------------------------------------------------------------------
+Device trees is used to setup what kind of hardware we have. This is
+done in 2 layers.
+
+Examples:
+Device tree all basis:     /products/family/Basis/Standard/dts/base.dtsi
+Device tree lynx specific: /products/family/Basis/Standard/dts/cards/lynx-power.dtsi
